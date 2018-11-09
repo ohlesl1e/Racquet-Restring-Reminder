@@ -17,9 +17,17 @@ public class Main {
 		Gson gson = new Gson();
 		Scanner input = new Scanner(System.in);
 		boolean quit = false;
+		StringDatabase stringDatabase = null;
+		try {
+			stringDatabase = new StringDatabase();
+		}catch (FileNotFoundException | UnsupportedEncodingException e){
+			e.printStackTrace();
+		}
 		while (quit == false){
 			printMenu();
 			switch (input.nextInt()){
+				case 1: stringDatabase.addString();
+				break;
 				case 4: quit = true;
 				break;
 				default: System.out.println("Invalid Command");
