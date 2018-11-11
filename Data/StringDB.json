@@ -1,9 +1,24 @@
 {
-	"strings":[
+	 "strings":[
 		{
-			"name" : "Babolat RPM Blast",
-			"material" : "Polyester",
-			"tensionLoss" : 17.13
+		  "name": "Babolat RPM Blast",
+		  "material": "Polyester",
+		  "tensionLoss": 17.13
+		},
+		{
+		  "name": "Babolat VS Touch",
+		  "material": "Natural Gut",
+		  "tensionLoss": 8.31
+		},
+		{
+		  "name": "Babolat RPM Blast Rough",
+		  "material": "Polyester",
+		  "tensionLoss": 19.69
+		},
+		{
+		  "name": "Babolat M7",
+		  "material": "Multifilament",
+		  "tensionLoss": 15.01
 		}
 	]
 }
