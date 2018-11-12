@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class CustomerHeap {
 	private ArrayList<Customer> customers;
@@ -84,24 +85,69 @@ public class CustomerHeap {
 		}
 	}
 
-	public void saveDatabase() {
-		PrintWriter pw = null;
-		try {
-			pw = new PrintWriter("./Data/UserDB.json");
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+	public void showAllCustomers(){
+		for (Customer c : customers){
+			c.printContact();
 		}
-		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		StringBuilder sb = new StringBuilder();
-		sb.append("{\n \"customers\":[ \n");
-		for (Customer s : customers) {
-			sb.append(gson.toJson(s));
-			sb.append(",\n");
+	}
+
+	public int calculateDate(String mains, String crosses, double mTension, double xTension, Database db, int date) {
+		int days = 0;
+		int returnDate = date;
+		if(mains.equalsIgnoreCase(crosses) || db.findString(mains).getTensionLoss() < db.findString(crosses).getTensionLoss()){
+			days = (int) (Math.pow(db.findString(mains).getTensionLoss(), 25) - 1);
+		} else {
+			days = (int) (Math.pow(db.findString(crosses).getTensionLoss(), 25) - 1);
 		}
-		sb.deleteCharAt(sb.length() - 2);
-		sb.append("]\n}");
-		pw.println(sb);
-		pw.close();
+		returnDate += 100 * (days / 30);
+		returnDate += days % 30;
+		return returnDate;
+	}
+
+	public void addCustomer(Database db, int date) {
+		Scanner in = new Scanner(System.in);
+		String name, contact, mains, crosses;
+		double mTension, xTension;
+		System.out.print("Enter Customer Name: ");
+		name = in.nextLine();
+		System.out.print("Enter Contact Number: ");
+		contact = in.nextLine();
+		System.out.print("Enter Main String: ");
+		mains = in.nextLine();
+		System.out.print("Enter Cross String: ");
+		crosses = in.nextLine();
+		System.out.print("Enter Main Tension: ");
+		mTension = in.nextDouble();
+		System.out.print("Enter Cross Tension: ");
+		xTension = in.nextDouble();
+		int date2Return = calculateDate(mains, crosses, mTension, xTension, db, date);
+		Customer newCustomer = new Customer(name, mains, crosses, mTension, xTension, date2Return, contact);
+		add(newCustomer);
+		db.customers.add(newCustomer);
+	}
+
+	public void printCustomers(int date) {
+		Scanner ps = new Scanner(System.in);
+		boolean theEnd = false;
+		int index = 0;
+		if (get(index).getDate2Return() > date) {
+			theEnd = true;
+		} else {
+			while (theEnd == false) {
+				get(index).printContact();
+				index++;
+				if (get(index).getDate2Return() > date || index >= size) {
+					theEnd = true;
+				}
+			}
+			System.out.print("Remove Contacted Customers?(Y/N): ");
+			String remove = ps.nextLine();
+			if (remove.equalsIgnoreCase("Y")) {
+				for (int i = 0; i < index; i++) {
+					remove(0);
+				}
+			}
+		}
 	}
 
 	public class HeapException extends RuntimeException {

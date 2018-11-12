@@ -1,5 +1,7 @@
 package reminder;
 
+import java.util.Comparator;
+
 public class StringType {
 	private String name;
 	private String material;
@@ -26,4 +28,14 @@ public class StringType {
 	public void setTensionLoss(double tensionLoss) {
 		this.tensionLoss = tensionLoss;
 	}
+
+	public static Comparator<StringType> nameComparator = new Comparator<StringType>() {
+
+		public int compare(StringType s1, StringType s2) {
+			String stringName1 = s1.getName();
+			String stringName2 = s2.getName();
+
+			return stringName1.compareToIgnoreCase(stringName2);
+		}
+	};
 }

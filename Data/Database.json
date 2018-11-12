@@ -1,0 +1,186 @@
+{
+ "strings":[ 
+{
+  "name": "Babolat Addiction",
+  "material": "Multifilament",
+  "tensionLoss": 1.19
+},
+{
+  "name": "Babolat Duralast",
+  "material": "Polyester",
+  "tensionLoss": 1.09
+},
+{
+  "name": "Babolat M7",
+  "material": "Multifilament",
+  "tensionLoss": 1.15
+},
+{
+  "name": "Babolat Origin",
+  "material": "Monofilament",
+  "tensionLoss": 1.164
+},
+{
+  "name": "Babolat RPM Blast",
+  "material": "Polyester",
+  "tensionLoss": 1.13
+},
+{
+  "name": "Babolat RPM Blast Rough",
+  "material": "Polyester",
+  "tensionLoss": 1.114
+},
+{
+  "name": "Babolat SG Siraltek",
+  "material": "Synthetic Gut",
+  "tensionLoss": 1.161
+},
+{
+  "name": "Babolat Synthetic Gut",
+  "material": "Synthetic Gut",
+  "tensionLoss": 1.166
+},
+{
+  "name": "Babolat VS Team",
+  "material": "Natural Gut",
+  "tensionLoss": 1.29
+},
+{
+  "name": "Babolat VS Touch",
+  "material": "Natural Gut",
+  "tensionLoss": 1.29
+},
+{
+  "name": "Babolat Xcel",
+  "material": "Multifilament",
+  "tensionLoss": 1.22
+},
+{
+  "name": "Luxilon 4G",
+  "material": "Polyester",
+  "tensionLoss": 1.17
+},
+{
+  "name": "Luxilon Adrenaline",
+  "material": "Polyester",
+  "tensionLoss": 1.116
+},
+{
+  "name": "Luxilon Alu Power Feel",
+  "material": "Polyester",
+  "tensionLoss": 1.123
+},
+{
+  "name": "Luxilon Alu Power Fluoro",
+  "material": "Polyester",
+  "tensionLoss": 1.128
+},
+{
+  "name": "Luxilon Alu Power Rough",
+  "material": "Polyester",
+  "tensionLoss": 1.118
+},
+{
+  "name": "Luxilon Alu Power Spin",
+  "material": "Polyester",
+  "tensionLoss": 1.117
+},
+{
+  "name": "Luxilon Element",
+  "material": "Polyester",
+  "tensionLoss": 1.114
+},
+{
+  "name": "Luxilon Original",
+  "material": "Polyester",
+  "tensionLoss": 1.13
+},
+{
+  "name": "Luxilon Savage",
+  "material": "Polyester",
+  "tensionLoss": 1.12
+},
+{
+  "name": "Luxilon Timo",
+  "material": "Polyester",
+  "tensionLoss": 1.14
+},
+{
+  "name": "Wilson Natural Gut",
+  "material": "Natural Gut",
+  "tensionLoss": 1.29
+},
+{
+  "name": "Wilson NXT",
+  "material": "Multifilament",
+  "tensionLoss": 1.18
+},
+{
+  "name": "Wilson NXT Power",
+  "material": "Multifilament",
+  "tensionLoss": 1.19
+},
+{
+  "name": "Wilson Revolve",
+  "material": "Polyester",
+  "tensionLoss": 1.12
+},
+{
+  "name": "Wilson Sensation",
+  "material": "Multifilament",
+  "tensionLoss": 1.196
+},
+{
+  "name": "Wilson Synthetic Gut",
+  "material": "Synthetic Gut",
+  "tensionLoss": 1.18
+}
+],
+"customers":[ 
+{
+  "name": "Zach Miller",
+  "mainString": "Solinco Hyper G",
+  "crossString": "Solinco Hyper G",
+  "mainTension": 41.0,
+  "crossTension": 41.0,
+  "date2Return": 20181114,
+  "contact": "2025550129"
+},
+{
+  "name": "Leslie Zhou",
+  "mainString": "Babolat RPM Blast",
+  "crossString": "Babolat RPM Blast",
+  "mainTension": 55.0,
+  "crossTension": 55.0,
+  "date2Return": 20181130,
+  "contact": "8312541995"
+},
+{
+  "name": "Leslie Zhou",
+  "mainString": "Babolat RPM Blast",
+  "crossString": "Babolat RPM Blast",
+  "mainTension": 55.0,
+  "crossTension": 55.0,
+  "date2Return": 20181132,
+  "contact": "8312541995"
+},
+{
+  "name": "Roger Federer",
+  "mainString": "Wilson Natural Gut",
+  "crossString": "Luxilon Alu Power Rough",
+  "mainTension": 56.0,
+  "crossTension": 57.5,
+  "date2Return": 20181211,
+  "contact": "353209139323"
+},
+{
+  "name": "Henry Shea",
+  "mainString": "Luxilon Alu Power Spin",
+  "crossString": "Wilson Sensation",
+  "mainTension": 53.0,
+  "crossTension": 53.0,
+  "date2Return": 20181126,
+  "contact": "4159203053"
+}
+]
+}

@@ -1,8 +1,6 @@
 package reminder;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -15,120 +13,71 @@ public class Main {
 		System.out.println("1. Add String to Database");
 		System.out.println("2. Add Customers");
 		System.out.println("3. Show Restring Required Customers");
-		System.out.println("4. Quit");
-		System.out.println("Enter a Number: ");
+		System.out.println("4. Show All Customers");
+		System.out.println("5. Show All Strings");
+		System.out.println("6. Quit");
+		System.out.print("Enter a Number: ");
 	}
 
-	public static CustomerHeap createHeap() {
-		Gson gson = new Gson();
-		BufferedReader br = null;
-		try {
-			br = new BufferedReader(new FileReader("./Data/UserDB.json"));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		JsonParser jp = new JsonParser();
-		JsonObject obj = jp.parse(br).getAsJsonObject();
-
-		Customer[] customerArray = gson.fromJson(obj.get("customers"), Customer[].class);
+	public static CustomerHeap createHeap(Database db) {
 		CustomerHeap heap = new CustomerHeap();
-		for (Customer c : customerArray) {
+		for (Customer c : db.customers) {
 			heap.add(c);
 		}
-
 		return heap;
-	}
-
-	public static int calculateDate(String mains, String crosses, double mTension, double xTension, StringDatabase db, int date) {
-		Scanner x = new Scanner(System.in);
-		System.out.print("Enter Days to Return: ");
-		int days = x.nextInt();
-		int returnDate = date;
-		returnDate += 100 * (days / 30);
-		returnDate += days % 30;
-		return returnDate;
-	}
-
-	public static void addCustomer(CustomerHeap heap, StringDatabase db, int date) {
-		Scanner in = new Scanner(System.in);
-		String name, contact, mains, crosses;
-		double mTension, xTension;
-		System.out.print("Enter Customer Name: ");
-		name = in.nextLine();
-		System.out.print("Enter Contact Number: ");
-		contact = in.nextLine();
-		System.out.print("Enter Main String: ");
-		mains = in.nextLine();
-		System.out.print("Enter Cross String: ");
-		crosses = in.nextLine();
-		System.out.print("Enter Main Tension: ");
-		mTension = in.nextDouble();
-		System.out.print("Enter Cross Tension: ");
-		xTension = in.nextDouble();
-		int date2Return = calculateDate(mains, crosses, mTension, xTension, db, date);
-		heap.add(new Customer(name, mains, crosses, mTension, xTension, date2Return, contact));
-	}
-
-	public static void printCustomers(CustomerHeap heap, int date) {
-		Scanner ps = new Scanner(System.in);
-		boolean theEnd = false;
-		int index = 0;
-		if (heap.get(index).getDate2Return() > date) {
-			theEnd = true;
-		} else {
-			while (theEnd == false) {
-				heap.get(index).printContact();
-				index++;
-				if (heap.get(index).getDate2Return() > date || index >= heap.size) {
-					theEnd = true;
-				}
-			}
-			System.out.print("Remove Contacted Customers?(Y/N): ");
-			String remove = ps.next();
-			if (remove.equalsIgnoreCase("Y")) {
-				for (int i = 0; i < index; i++) {
-					heap.remove(0);
-				}
-			}
-		}
-		System.out.println();
 	}
 
 	public static void main(String[] args) {
 		Gson gson = new Gson();
 		Scanner input = new Scanner(System.in);
 		boolean quit = false;
-		CustomerHeap customerHeap = createHeap();
-		StringDatabase stringDatabase = null;
+		Database database = null;
 		try {
-			stringDatabase = new StringDatabase();
-		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+			database = new Database();
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+		CustomerHeap customerHeap = createHeap(database);
 		Date currentDate = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-		String string = dateFormat.format(currentDate);
 		int today = Integer.parseInt(dateFormat.format(currentDate));
 		while (quit == false) {
 			printMenu();
 			switch (input.nextInt()) {
 				case 1:
-					stringDatabase.addString();
+					System.out.println();
+					database.addString();
+					System.out.println("=====================================================================================================\n");
 					break;
 				case 2:
-					addCustomer(customerHeap, stringDatabase, today);
+					System.out.println();
+					customerHeap.addCustomer(database, today);
+					System.out.println("=====================================================================================================\n");
 					break;
 				case 3:
-					printCustomers(customerHeap, today);
+					System.out.println();
+					customerHeap.printCustomers(today);
+					System.out.println("=====================================================================================================\n");
 					break;
 				case 4:
+					System.out.println("\nCustomers:");
+					customerHeap.showAllCustomers();
+					System.out.println("=====================================================================================================\n");
+					break;
+				case 5:
+					System.out.println("\nInventory:");
+					database.printAllStrings();
+					System.out.println("=====================================================================================================\n");
+					break;
+				case 6:
 					quit = true;
+					System.out.println("=====================================================================================================\n");
 					break;
 				default:
 					System.out.println("Invalid Command");
+					System.out.println("=====================================================================================================\n");
 			}
 		}
-		stringDatabase.saveDatabase();
-		customerHeap.saveDatabase();
+		database.saveDatabase();
 	}
 }
