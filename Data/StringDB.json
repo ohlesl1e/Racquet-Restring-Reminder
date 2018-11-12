@@ -1,24 +1,39 @@
 {
-	 "strings":[
-		{
-		  "name": "Babolat RPM Blast",
-		  "material": "Polyester",
-		  "tensionLoss": 17.13
-		},
-		{
-		  "name": "Babolat VS Touch",
-		  "material": "Natural Gut",
-		  "tensionLoss": 8.31
-		},
-		{
-		  "name": "Babolat RPM Blast Rough",
-		  "material": "Polyester",
-		  "tensionLoss": 19.69
-		},
-		{
-		  "name": "Babolat M7",
-		  "material": "Multifilament",
-		  "tensionLoss": 15.01
-		}
-	]
+  "strings": [
+    {
+      "name": "Babolat RPM Blast",
+      "material": "Polyester",
+      "tensionLoss": 17.13
+    },
+    {
+      "name": "Babolat VS Touch",
+      "material": "Natural Gut",
+      "tensionLoss": 8.31
+    },
+    {
+      "name": "Babolat RPM Blast Rough",
+      "material": "Polyester",
+      "tensionLoss": 19.69
+    },
+    {
+      "name": "Babolat M7",
+      "material": "Multifilament",
+      "tensionLoss": 15.01
+    },
+    {
+      "name": "Wilson Sensation",
+      "material": "Multifilament",
+      "tensionLoss": 11.91
+    },
+    {
+      "name": "Luxilon Alu Power Spin",
+      "material": "Polyester",
+      "tensionLoss": 19.25
+    },
+    {
+      "name": "Babolat Duralast",
+      "material": "Polyester",
+      "tensionLoss": 25.07
+    }
+  ]
 }

@@ -7,9 +7,9 @@ public class Customer {
 	private double mainTension;
 	private double crossTension;
 	private int date2Return;
-	private int contact;
+	private String contact;
 
-	public Customer(String name, String mainString, String crossString, double mainTension, double crossTension, int date2Return, int contact){
+	public Customer(String name, String mainString, String crossString, double mainTension, double crossTension, int date2Return, String contact) {
 		this.name = name;
 		this.mainString = mainString;
 		this.crossString = crossString;
@@ -19,11 +19,11 @@ public class Customer {
 		this.contact = contact;
 	}
 
-	public int getDate2Return(){
+	public int getDate2Return() {
 		return this.date2Return;
 	}
 
-	public void printContact(){
-		System.out.println(this.name + " " + this.contact + " " + this.mainString + "/" + this.crossString + " @ " + this.mainTension + "/" + this.crossTension);
+	public void printContact() {
+		System.out.println(this.name + ", " + this.contact + ", " + this.mainString + "/" + this.crossString + " @ " + this.mainTension + "/" + this.crossTension);
 	}
 }
