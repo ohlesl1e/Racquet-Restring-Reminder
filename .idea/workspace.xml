@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a374f055-a14e-4318-a4ee-0e134d7d970c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/StringDB.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/UserDB.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Racquet Restring Reminder.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Racquet Restring Reminder/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Racquet Restring Reminder/reminder/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Racquet Restring Reminder/reminder/StringType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/CustomerHeap$HeapException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/CustomerHeap$HeapException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/CustomerHeap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/CustomerHeap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/StringDatabase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/StringType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/StringType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Database.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Database.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reminder/CustomerHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reminder/CustomerHeap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reminder/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reminder/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reminder/StringDatabase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reminder/StringType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reminder/StringType.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +16,12 @@
     <session id="-414813405">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -53,13 +40,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4890" />
+          <entry key="java" value="4897" />
           <entry key="json" value="474" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4890" />
+          <entry key="JAVA" value="4897" />
           <entry key="JSON" value="474" />
         </counts>
       </usages-collector>
@@ -83,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reminder/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
+            <state relative-caret-position="969">
               <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -92,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Data/Database.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
+            <state relative-caret-position="840">
               <caret line="81" column="2" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="2" />
             </state>
           </provider>
@@ -104,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reminder/StringType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
+            <state relative-caret-position="527">
               <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
               <folding>
                 <element signature="e#452#453#0" expanded="true" />
@@ -114,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reminder/CustomerHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2261">
-              <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
+            <state relative-caret-position="653">
+              <caret line="149" column="9" lean-forward="true" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,14 +147,14 @@
         <option value="$PROJECT_DIR$/src/reminder/StringType.java" />
         <option value="$PROJECT_DIR$/Data/StringDB.json" />
         <option value="$PROJECT_DIR$/src/reminder/StringDatabase.java" />
-        <option value="$PROJECT_DIR$/src/reminder/CustomerHeap.java" />
         <option value="$PROJECT_DIR$/src/reminder/Main.java" />
         <option value="$PROJECT_DIR$/Data/Database.json" />
         <option value="$PROJECT_DIR$/src/reminder/Database.java" />
+        <option value="$PROJECT_DIR$/src/reminder/CustomerHeap.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="278" />
     <option name="y" value="-22" />
     <option name="width" value="1400" />
@@ -178,6 +165,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,7 +194,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,9 +253,8 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2553305" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25799572" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.329718" />
@@ -280,6 +266,7 @@
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.329718" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -319,10 +306,10 @@
     <entry file="file://$PROJECT_DIR$/src/reminder/StringDatabase.java" />
     <entry file="file://$PROJECT_DIR$/Data/StringDB.json" />
     <entry file="file://$PROJECT_DIR$/Data/UserDB.json" />
-    <entry file="file://$PROJECT_DIR$/src/reminder/CustomerHeap.java">
+    <entry file="file://$PROJECT_DIR$/src/reminder/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
+        <state relative-caret-position="969">
+          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -331,7 +318,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reminder/StringType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
+        <state relative-caret-position="527">
           <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
           <folding>
             <element signature="e#452#453#0" expanded="true" />
@@ -351,6 +338,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Database.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="81" column="2" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/reminder/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -361,20 +355,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reminder/Database.java">
+    <entry file="file://$PROJECT_DIR$/src/reminder/CustomerHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
+        <state relative-caret-position="653">
+          <caret line="149" column="9" lean-forward="true" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Database.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="2" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="2" />
         </state>
       </provider>
     </entry>

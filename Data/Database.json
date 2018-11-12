@@ -106,6 +106,21 @@
   "tensionLoss": 1.14
 },
 {
+  "name": "Solinco Barb Wire",
+  "material": "Polyester",
+  "tensionLoss": 1.127
+},
+{
+  "name": "Solinco Hyper G",
+  "material": "Polyester",
+  "tensionLoss": 1.129
+},
+{
+  "name": "Solinco Tour Bite",
+  "material": "Polyester",
+  "tensionLoss": 1.11
+},
+{
   "name": "Wilson Natural Gut",
   "material": "Natural Gut",
   "tensionLoss": 1.29

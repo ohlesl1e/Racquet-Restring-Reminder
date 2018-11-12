@@ -131,7 +131,7 @@ public class CustomerHeap {
 		boolean theEnd = false;
 		int index = 0;
 		if (get(index).getDate2Return() > date) {
-			theEnd = true;
+			return;
 		} else {
 			while (theEnd == false) {
 				get(index).printContact();
