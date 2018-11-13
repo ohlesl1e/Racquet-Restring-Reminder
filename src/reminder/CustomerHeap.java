@@ -5,9 +5,8 @@ import com.google.gson.GsonBuilder;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class CustomerHeap {
 	private ArrayList<Customer> customers;
@@ -51,6 +50,7 @@ public class CustomerHeap {
 		Collections.swap(customers, index, customers.size() - 1);
 		customers.remove(customers.size() - 1);
 		heapifyDown(index);
+		size--;
 	}
 
 	public void heapifyUp(int index) {
@@ -91,20 +91,21 @@ public class CustomerHeap {
 		}
 	}
 
-	public int calculateDate(String mains, String crosses, double mTension, double xTension, Database db, int date) {
+	public int calculateDate(String mains, String crosses, double mTension, double xTension, Database db, Calendar date) {
 		int days = 0;
-		int returnDate = date;
+		int returnDate = 0;
 		if(mains.equalsIgnoreCase(crosses) || db.findString(mains).getTensionLoss() < db.findString(crosses).getTensionLoss()){
 			days = (int) (Math.pow(db.findString(mains).getTensionLoss(), 25) - 1);
 		} else {
 			days = (int) (Math.pow(db.findString(crosses).getTensionLoss(), 25) - 1);
 		}
-		returnDate += 100 * (days / 30);
-		returnDate += days % 30;
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+		date.add(Calendar.DATE, days);
+		returnDate = Integer.parseInt(dateFormat.format(date.getTime()));
 		return returnDate;
 	}
 
-	public void addCustomer(Database db, int date) {
+	public void addCustomer(Database db, Calendar date) {
 		Scanner in = new Scanner(System.in);
 		String name, contact, mains, crosses;
 		double mTension, xTension;

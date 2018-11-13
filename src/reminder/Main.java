@@ -38,9 +38,9 @@ public class Main {
 			e.printStackTrace();
 		}
 		CustomerHeap customerHeap = createHeap(database);
-		Date currentDate = new Date();
+		Calendar currentDate = Calendar.getInstance();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-		int today = Integer.parseInt(dateFormat.format(currentDate));
+		int today = Integer.parseInt(dateFormat.format(currentDate.getTime()));
 		while (quit == false) {
 			printMenu();
 			switch (input.nextInt()) {
@@ -51,7 +51,7 @@ public class Main {
 					break;
 				case 2:
 					System.out.println();
-					customerHeap.addCustomer(database, today);
+					customerHeap.addCustomer(database, currentDate);
 					System.out.println("=====================================================================================================\n");
 					break;
 				case 3:

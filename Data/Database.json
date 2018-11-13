@@ -66,6 +66,11 @@
   "tensionLoss": 1.116
 },
 {
+  "name": "Luxilon Alu Power",
+  "material": "Polyester",
+  "tensionLoss": 1.13
+},
+{
   "name": "Luxilon Alu Power Feel",
   "material": "Polyester",
   "tensionLoss": 1.123
@@ -196,6 +201,15 @@
   "crossTension": 53.0,
   "date2Return": 20181126,
   "contact": "4159203053"
+},
+{
+  "name": "Jesse Inghelram",
+  "mainString": "Luxilon Alu Power",
+  "crossString": "Luxilon Alu Power",
+  "mainTension": 57.0,
+  "crossTension": 57.0,
+  "date2Return": 20181203,
+  "contact": "4153076114"
 }
 ]
 }
