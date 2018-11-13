@@ -121,7 +121,13 @@ public class CustomerHeap {
 		mTension = in.nextDouble();
 		System.out.print("Enter Cross Tension: ");
 		xTension = in.nextDouble();
-		int date2Return = calculateDate(mains, crosses, mTension, xTension, db, date);
+		int date2Return = 0;
+		try {
+			date2Return = calculateDate(mains, crosses, mTension, xTension, db, date);
+		} catch (NullPointerException e){
+			System.out.println("Fail to add customer. (string not found)");
+			return;
+		}
 		Customer newCustomer = new Customer(name, mains, crosses, mTension, xTension, date2Return, contact);
 		add(newCustomer);
 		db.customers.add(newCustomer);
