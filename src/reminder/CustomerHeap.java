@@ -1,10 +1,5 @@
 package reminder;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -85,24 +80,22 @@ public class CustomerHeap {
 		}
 	}
 
-	public void showAllCustomers(){
-		for (Customer c : customers){
+	public void showAllCustomers() {
+		for (Customer c : customers) {
 			c.printContact();
 		}
 	}
 
-	public int calculateDate(String mains, String crosses, double mTension, double xTension, Database db, Calendar date) {
-		int days = 0;
-		int returnDate = 0;
-		if(mains.equalsIgnoreCase(crosses) || db.findString(mains).getTensionLoss() < db.findString(crosses).getTensionLoss()){
+	public Calendar calculateDate(String mains, String crosses, Database db, Calendar date) {
+		int days;
+		Calendar returnDate = (Calendar) date.clone();
+		if (mains.equalsIgnoreCase(crosses) || db.findString(mains).getTensionLoss() < db.findString(crosses).getTensionLoss()) {
 			days = (int) (Math.pow(db.findString(mains).getTensionLoss(), 25) - 1);
 		} else {
 			days = (int) (Math.pow(db.findString(crosses).getTensionLoss(), 25) - 1);
 		}
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-		date.add(Calendar.DATE, days);
-		returnDate = Integer.parseInt(dateFormat.format(date.getTime()));
-		return returnDate;
+		returnDate.add(Calendar.DATE, days);
+		return date;
 	}
 
 	public void addCustomer(Database db, Calendar date) {
@@ -121,39 +114,41 @@ public class CustomerHeap {
 		mTension = in.nextDouble();
 		System.out.print("Enter Cross Tension: ");
 		xTension = in.nextDouble();
-		int date2Return = 0;
+		Calendar date2Return;
 		try {
-			date2Return = calculateDate(mains, crosses, mTension, xTension, db, date);
-		} catch (NullPointerException e){
+			date2Return = calculateDate(mains, crosses, db, date);
+		} catch (NullPointerException e) {
 			System.out.println("Fail to add customer. (string not found)");
 			return;
 		}
-		Customer newCustomer = new Customer(name, mains, crosses, mTension, xTension, date2Return, contact);
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+		SimpleDateFormat otherFormat = new SimpleDateFormat("MM/dd/yyyy");
+		Customer newCustomer = new Customer(name, mains, crosses, mTension, xTension, Integer.parseInt(dateFormat.format(date2Return.getTime())), contact);
 		add(newCustomer);
 		db.customers.add(newCustomer);
+		System.out.println("Customer added: " + name + ", " + contact + ", Returning on: " + otherFormat.format(date2Return.getTime()));
 	}
 
-	public void printCustomers(int date) {
-		Scanner ps = new Scanner(System.in);
-		boolean theEnd = false;
-		int index = 0;
-		if (get(index).getDate2Return() > date) {
+	public boolean printCustomers(int date, int i) {
+		boolean printed = false;
+		if (get(i).getDate2Return() > date) {
+			return printed;
+		} else {
+			get(i).printContact();
+			printCustomers(date, getLeftChildIndex(i));
+			printCustomers(date, getRightChildIndex(i));
+			printed = true;
+		}
+		return printed;
+	}
+
+	public void removePrintedCustomers(int date, int i) {
+		if (get(i).getDate2Return() > date) {
 			return;
 		} else {
-			while (theEnd == false) {
-				get(index).printContact();
-				index++;
-				if (get(index).getDate2Return() > date || index >= size) {
-					theEnd = true;
-				}
-			}
-			System.out.print("Remove Contacted Customers?(Y/N): ");
-			String remove = ps.nextLine();
-			if (remove.equalsIgnoreCase("Y")) {
-				for (int i = 0; i < index; i++) {
-					remove(0);
-				}
-			}
+			removePrintedCustomers(date, getLeftChildIndex(i));
+			removePrintedCustomers(date, getRightChildIndex(i));
+			remove(i);
 		}
 	}
 

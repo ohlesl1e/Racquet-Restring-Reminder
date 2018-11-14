@@ -56,7 +56,13 @@ public class Main {
 					break;
 				case 3:
 					System.out.println();
-					customerHeap.printCustomers(today);
+					if (customerHeap.printCustomers(today, 0)) {
+						System.out.print("Remove Contacted Customers?(Y/N): ");
+						String remove = input.next();
+						if (remove.equalsIgnoreCase("y")) {
+							customerHeap.removePrintedCustomers(today, 0);
+						}
+					}
 					System.out.println("=====================================================================================================\n");
 					break;
 				case 4:
@@ -78,6 +84,6 @@ public class Main {
 					System.out.println("=====================================================================================================\n");
 			}
 		}
-		database.saveDatabase();
+		database.saveDatabase(customerHeap);
 	}
 }

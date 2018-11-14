@@ -13,7 +13,7 @@ public class Database {
 	protected static HashMap<String, StringType> stringTypeHashMap = new HashMap<>();
 	protected ArrayList<Customer> customers = new ArrayList<>();
 
-	public Database() throws FileNotFoundException{
+	public Database() throws FileNotFoundException {
 		Gson gson = new Gson();
 		BufferedReader br = new BufferedReader(new FileReader("./Data/Database.json"));
 		JsonParser jp = new JsonParser();
@@ -28,13 +28,18 @@ public class Database {
 			stringTypeHashMap.put(stringName, s);
 		}
 
-		for (Customer c : customersArray){
+		for (Customer c : customersArray) {
 			this.customers.add(c);
 		}
 	}
 
-	public StringType findString(String s){
+	public StringType findString(String s) {
 		return stringTypeHashMap.get(s);
+	}
+
+	public double calculateTensionLoss(double x) {
+		double tensionLoss = Math.pow(Math.E, (Math.log(31) / (100 * (x / 62))));
+		return tensionLoss;
 	}
 
 	public void addString() {
@@ -44,19 +49,20 @@ public class Database {
 		System.out.print("Enter String Material: ");
 		String material = i.nextLine();
 		System.out.print("Enter String Tensionloss: ");
-		double tensionloss = i.nextDouble();
+		double tensionloss = calculateTensionLoss(i.nextDouble());
 		StringType newString = new StringType(name, material, tensionloss);
 		stringTypeHashMap.put(name, newString);
 		strings.add(newString);
+		System.out.println("String added: " + name + ", " + material + ", " + tensionloss);
 	}
 
-	public void printAllStrings(){
-		for(StringType s : strings){
+	public void printAllStrings() {
+		for (StringType s : strings) {
 			System.out.println(s.getName());
 		}
 	}
 
-	public void saveDatabase() {
+	public void saveDatabase(CustomerHeap heap) {
 		//clear duplicate strings just in case
 		Set<StringType> noDuplicates = new LinkedHashSet<>(strings);
 		strings.clear();
@@ -83,8 +89,8 @@ public class Database {
 
 		//saving customers
 		sb.append("\"customers\":[ \n");
-		for (Customer s : customers) {
-			sb.append(gson.toJson(s));
+		for (int i = 0; i < heap.size; i++) {
+			sb.append(gson.toJson(heap.get(i)));
 			sb.append(",\n");
 		}
 		sb.deleteCharAt(sb.length() - 2);
