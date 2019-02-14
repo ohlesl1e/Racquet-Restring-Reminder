@@ -36,7 +36,7 @@
   "tensionLoss": 1.114
 },
 {
-  "name": "Babolat SG Siraltek",
+  "name": "Babolat SG Spiraltek",
   "material": "Synthetic Gut",
   "tensionLoss": 1.161
 },
@@ -59,6 +59,11 @@
   "name": "Babolat Xcel",
   "material": "Multifilament",
   "tensionLoss": 1.22
+},
+{
+  "name": "Dunlop Black Widow",
+  "material": "Polyester",
+  "tensionLoss": 1.0887832732691458
 },
 {
   "name": "Gamma Live Wire",
@@ -206,6 +211,11 @@
   "tensionLoss": 1.11
 },
 {
+  "name": "Volkl Cyclone",
+  "material": "Polyester",
+  "tensionLoss": 1.146351216853399
+},
+{
   "name": "Wilson Natural Gut",
   "material": "Natural Gut",
   "tensionLoss": 1.29
@@ -238,94 +248,31 @@
 ],
 "customers":[ 
 {
-  "name": "Thomaz Bellucci",
-  "mainString": "Luxilon Alu Power",
-  "crossString": "Luxilon Alu Power",
-  "mainTension": 56.0,
-  "crossTension": 56.0,
-  "date2Return": 20181103,
-  "contact": "3849174920"
-},
-{
-  "name": "Novak Djokovic",
-  "mainString": "Babolat VS Team",
-  "crossString": "Luxilon Alu Power",
-  "mainTension": 59.0,
-  "crossTension": 56.0,
-  "date2Return": 20181103,
-  "contact": "3829175839"
-},
-{
-  "name": "Serena Williams",
+  "name": "Venus Williams",
   "mainString": "Wilson Natural",
   "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 65.0,
+  "mainTension": 64.0,
   "crossTension": 66.0,
-  "date2Return": 20181114,
-  "contact": "842843834"
+  "date2Return": 20181115,
+  "contact": "452374368"
 },
 {
-  "name": "Serena Williams",
+  "name": "Eamonn Mcdonnell",
   "mainString": "Wilson Natural",
   "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 65.0,
+  "mainTension": 64.0,
   "crossTension": 66.0,
-  "date2Return": 20181103,
-  "contact": "413317123"
-},
-{
-  "name": "Roger Federer",
-  "mainString": "Wilson Natural",
-  "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 48.5,
-  "crossTension": 45.0,
-  "date2Return": 20181118,
-  "contact": "3920185930"
-},
-{
-  "name": "Tomas Berdych",
-  "mainString": "Luxilon Alu Power",
-  "crossString": "Luxilon Alu Power",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20181123,
-  "contact": "3827495027"
-},
-{
-  "name": "Zach Miller",
-  "mainString": "Solinco Hyper G",
-  "crossString": "Solinco Hyper G",
-  "mainTension": 41.0,
-  "crossTension": 41.0,
-  "date2Return": 20181114,
-  "contact": "2025550129"
-},
-{
-  "name": "Roger Federer",
-  "mainString": "Wilson Natural Gut",
-  "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 56.0,
-  "crossTension": 57.5,
-  "date2Return": 20181111,
-  "contact": "353209139323"
-},
-{
-  "name": "Some Dude",
-  "mainString": "Babolat Synthetic Gut",
-  "crossString": "Babolat Synthetic Gut",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
   "date2Return": 20181116,
-  "contact": "3922783982"
+  "contact": "63636966"
 },
 {
-  "name": "Some Dude",
-  "mainString": "Babolat Synthetic Gut",
-  "crossString": "Babolat Synthetic Gut",
+  "name": "Vanessa Donovan",
+  "mainString": "Babolat RPM Blast",
+  "crossString": "Babolat RPM Blast",
   "mainTension": 55.0,
   "crossTension": 55.0,
-  "date2Return": 20181130,
-  "contact": "3922783982"
+  "date2Return": 20181128,
+  "contact": "734678757"
 },
 {
   "name": "Some Dude",
@@ -346,88 +293,16 @@
   "contact": "4153076114"
 },
 {
-  "name": "Some Dude",
+  "name": "Bluebell Rennie",
   "mainString": "Babolat Synthetic Gut",
   "crossString": "Babolat Synthetic Gut",
   "mainTension": 55.0,
   "crossTension": 55.0,
-  "date2Return": 20181202,
+  "date2Return": 20181130,
   "contact": "3922783982"
 },
 {
-  "name": "Andy Murray",
-  "mainString": "Luxilon Alu Power",
-  "crossString": "Babolat VS Touch",
-  "mainTension": 62.0,
-  "crossTension": 62.0,
-  "date2Return": 20181205,
-  "contact": "541547493"
-},
-{
-  "name": "Leslie Zhou",
-  "mainString": "Babolat RPM Blast",
-  "crossString": "Babolat RPM Blast",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20181132,
-  "contact": "8312541995"
-},
-{
-  "name": "Venus Williams",
-  "mainString": "Wilson Natural",
-  "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 64.0,
-  "crossTension": 66.0,
-  "date2Return": 20181116,
-  "contact": "63636966"
-},
-{
-  "name": "Venus Williams",
-  "mainString": "Wilson Natural",
-  "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 64.0,
-  "crossTension": 66.0,
-  "date2Return": 20181115,
-  "contact": "452374368"
-},
-{
-  "name": "Andy Murray",
-  "mainString": "Luxilon Alu Power",
-  "crossString": "Babolat VS Touch",
-  "mainTension": 62.0,
-  "crossTension": 62.0,
-  "date2Return": 20181124,
-  "contact": "46947547"
-},
-{
-  "name": "Rafael Nadal",
-  "mainString": "Babolat RPM Blast",
-  "crossString": "Babolat RPM Blast",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20181128,
-  "contact": "734678757"
-},
-{
-  "name": "Serena Williams",
-  "mainString": "Wilson Natural",
-  "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 65.0,
-  "crossTension": 66.0,
-  "date2Return": 20181208,
-  "contact": "832677746"
-},
-{
-  "name": "Some Dude",
-  "mainString": "Babolat Synthetic Gut",
-  "crossString": "Babolat Synthetic Gut",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20181230,
-  "contact": "3922783982"
-},
-{
-  "name": "Leslie Zhou",
+  "name": "Justine Schofield",
   "mainString": "Babolat RPM Blast",
   "crossString": "Babolat RPM Blast",
   "mainTension": 55.0,
@@ -445,15 +320,6 @@
   "contact": "630997198"
 },
 {
-  "name": "Roger Federer",
-  "mainString": "Wilson Natural",
-  "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 48.5,
-  "crossTension": 45.0,
-  "date2Return": 20181218,
-  "contact": "3920185930"
-},
-{
   "name": "David Ferrer",
   "mainString": "Luxilon Original",
   "crossString": "Luxilon Original",
@@ -463,13 +329,22 @@
   "contact": "3728194836"
 },
 {
-  "name": "Some Dude",
-  "mainString": "Babolat Synthetic Gut",
-  "crossString": "Babolat Synthetic Gut",
+  "name": "Anna Riddle",
+  "mainString": "Babolat RPM Blast",
+  "crossString": "Babolat RPM Blast",
   "mainTension": 55.0,
   "crossTension": 55.0,
-  "date2Return": 20181230,
-  "contact": "3922783982"
+  "date2Return": 20181220,
+  "contact": "77772417"
+},
+{
+  "name": "Safwan Alston",
+  "mainString": "Babolat VS Team",
+  "crossString": "Luxilon Alu Power Rough",
+  "mainTension": 59.0,
+  "crossTension": 56.0,
+  "date2Return": 20181203,
+  "contact": "3829175839"
 },
 {
   "name": "Andy Murray",
@@ -481,22 +356,13 @@
   "contact": "368981002"
 },
 {
-  "name": "Jeff Thomas",
-  "mainString": "Wilson Sensation",
-  "crossString": "Wilson Sensation",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20190207,
-  "contact": "4158391829"
-},
-{
-  "name": "Some Dude",
-  "mainString": "Babolat Synthetic Gut",
-  "crossString": "Babolat Synthetic Gut",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20181214,
-  "contact": "3922783982"
+  "name": "Tahlia Cartwright",
+  "mainString": "Wilson Natural",
+  "crossString": "Luxilon Alu Power Rough",
+  "mainTension": 65.0,
+  "crossTension": 66.0,
+  "date2Return": 20181208,
+  "contact": "832677746"
 },
 {
   "name": "Serena Williams",
@@ -504,17 +370,35 @@
   "crossString": "Luxilon Alu Power Rough",
   "mainTension": 65.0,
   "crossTension": 66.0,
-  "date2Return": 20181218,
-  "contact": "231819073"
+  "date2Return": 20181209,
+  "contact": "330711205"
 },
 {
-  "name": "Novak Djokovic",
-  "mainString": "Babolat VS Team",
+  "name": "Margie Gilmour",
+  "mainString": "Luxilon Alu Power",
+  "crossString": "Babolat VS Touch",
+  "mainTension": 62.0,
+  "crossTension": 62.0,
+  "date2Return": 20181205,
+  "contact": "541547493"
+},
+{
+  "name": "Jane Shvartman",
+  "mainString": "Babolat RPM Blast Rough",
+  "crossString": "Babolat RPM Blast Rough",
+  "mainTension": 48.0,
+  "crossTension": 48.0,
+  "date2Return": 20181212,
+  "contact": "4157358588"
+},
+{
+  "name": "Neve Santana",
+  "mainString": "Wilson Natural",
   "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 59.0,
-  "crossTension": 56.0,
-  "date2Return": 20181224,
-  "contact": "242198811"
+  "mainTension": 48.5,
+  "crossTension": 45.0,
+  "date2Return": 20181218,
+  "contact": "3920185930"
 },
 {
   "name": "Novak Djokovic",
@@ -526,31 +410,49 @@
   "contact": "2952399"
 },
 {
-  "name": "Leslie Zhou",
-  "mainString": "Babolat RPM Blast",
-  "crossString": "Babolat RPM Blast",
+  "name": "Some Dude",
+  "mainString": "Babolat Synthetic Gut",
+  "crossString": "Babolat Synthetic Gut",
   "mainTension": 55.0,
   "crossTension": 55.0,
   "date2Return": 20181230,
-  "contact": "679289800"
+  "contact": "3922783982"
 },
 {
-  "name": "Leslie Zhou",
-  "mainString": "Babolat RPM Blast",
-  "crossString": "Babolat RPM Blast",
+  "name": "Some Dude",
+  "mainString": "Babolat Synthetic Gut",
+  "crossString": "Babolat Synthetic Gut",
   "mainTension": 55.0,
   "crossTension": 55.0,
-  "date2Return": 20181220,
-  "contact": "77772417"
+  "date2Return": 20181230,
+  "contact": "3922783982"
 },
 {
-  "name": "Henry Shea",
-  "mainString": "Luxilon Alu Power Spin",
-  "crossString": "Wilson Sensation",
-  "mainTension": 53.0,
-  "crossTension": 53.0,
-  "date2Return": 20181126,
-  "contact": "4159203053"
+  "name": "Some Dude",
+  "mainString": "Babolat Synthetic Gut",
+  "crossString": "Babolat Synthetic Gut",
+  "mainTension": 55.0,
+  "crossTension": 55.0,
+  "date2Return": 20181230,
+  "contact": "3922783982"
+},
+{
+  "name": "Some Dude",
+  "mainString": "Babolat Synthetic Gut",
+  "crossString": "Babolat Synthetic Gut",
+  "mainTension": 55.0,
+  "crossTension": 55.0,
+  "date2Return": 20181214,
+  "contact": "3922783982"
+},
+{
+  "name": "Some Dude",
+  "mainString": "Babolat Synthetic Gut",
+  "crossString": "Babolat Synthetic Gut",
+  "mainTension": 55.0,
+  "crossTension": 55.0,
+  "date2Return": 20190104,
+  "contact": "3922783982"
 },
 {
   "name": "Novak Djokovic",
@@ -558,8 +460,53 @@
   "crossString": "Luxilon Alu Power Rough",
   "mainTension": 59.0,
   "crossTension": 56.0,
-  "date2Return": 20181203,
-  "contact": "3829175839"
+  "date2Return": 20181224,
+  "contact": "242198811"
+},
+{
+  "name": "Some Dude",
+  "mainString": "Babolat Synthetic Gut",
+  "crossString": "Babolat Synthetic Gut",
+  "mainTension": 55.0,
+  "crossTension": 55.0,
+  "date2Return": 20190109,
+  "contact": "3922783982"
+},
+{
+  "name": "Roger Federer",
+  "mainString": "Wilson Natural",
+  "crossString": "Luxilon Alu Power Rough",
+  "mainTension": 48.5,
+  "crossTension": 45.0,
+  "date2Return": 20181221,
+  "contact": "1951262"
+},
+{
+  "name": "Roger Federer",
+  "mainString": "Wilson Natural",
+  "crossString": "Luxilon Alu Power Rough",
+  "mainTension": 48.5,
+  "crossTension": 45.0,
+  "date2Return": 20190111,
+  "contact": "877339330"
+},
+{
+  "name": "Some Dude",
+  "mainString": "Babolat Synthetic Gut",
+  "crossString": "Babolat Synthetic Gut",
+  "mainTension": 55.0,
+  "crossTension": 55.0,
+  "date2Return": 20190202,
+  "contact": "3922783982"
+},
+{
+  "name": "Makayla Braun",
+  "mainString": "Babolat Synthetic Gut",
+  "crossString": "Babolat Synthetic Gut",
+  "mainTension": 55.0,
+  "crossTension": 55.0,
+  "date2Return": 20181230,
+  "contact": "3922783982"
 },
 {
   "name": "Rafael Nadal",
@@ -580,22 +527,22 @@
   "contact": "660664801"
 },
 {
-  "name": "Roger Federer",
-  "mainString": "Wilson Natural Gut",
+  "name": "Serena Williams",
+  "mainString": "Wilson Natural",
   "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 48.5,
-  "crossTension": 45.0,
+  "mainTension": 65.0,
+  "crossTension": 66.0,
   "date2Return": 20181218,
-  "contact": "3920185930"
+  "contact": "231819073"
 },
 {
-  "name": "Andy Murray",
-  "mainString": "Luxilon Alu Power",
-  "crossString": "Babolat VS Touch",
-  "mainTension": 62.0,
-  "crossTension": 62.0,
-  "date2Return": 20190107,
-  "contact": "2839401653"
+  "name": "Jane Shvartman",
+  "mainString": "Babolat RPM Blast Rough",
+  "crossString": "Babolat RPM Blast Rough",
+  "mainTension": 48.0,
+  "crossTension": 48.0,
+  "date2Return": 20181225,
+  "contact": "4157358588"
 },
 {
   "name": "Roger Federer",
@@ -616,13 +563,13 @@
   "contact": "3922783982"
 },
 {
-  "name": "Rafael Nadal",
-  "mainString": "Babolat RPM Blast",
-  "crossString": "Babolat RPM Blast",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20190104,
-  "contact": "483202275"
+  "name": "Roger Federer",
+  "mainString": "Wilson Natural Gut",
+  "crossString": "Luxilon Alu Power Rough",
+  "mainTension": 48.5,
+  "crossTension": 45.0,
+  "date2Return": 20181218,
+  "contact": "3920185930"
 },
 {
   "name": "Leslie Zhou",
@@ -670,21 +617,21 @@
   "contact": "3922783982"
 },
 {
+  "name": "Jeff Thomas",
+  "mainString": "Wilson Sensation",
+  "crossString": "Wilson Sensation",
+  "mainTension": 55.0,
+  "crossTension": 55.0,
+  "date2Return": 20190207,
+  "contact": "4158391829"
+},
+{
   "name": "John Allen",
   "mainString": "Babolat Synthetic Gut",
   "crossString": "Babolat Synthetic Gut",
   "mainTension": 55.0,
   "crossTension": 55.0,
   "date2Return": 20190131,
-  "contact": "3922783982"
-},
-{
-  "name": "Some Dude",
-  "mainString": "Babolat Synthetic Gut",
-  "crossString": "Babolat Synthetic Gut",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20181230,
   "contact": "3922783982"
 },
 {
@@ -715,13 +662,13 @@
   "contact": "617955683"
 },
 {
-  "name": "Some Dude",
-  "mainString": "Babolat Synthetic Gut",
-  "crossString": "Babolat Synthetic Gut",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20181230,
-  "contact": "3922783982"
+  "name": "Novak Djokovic",
+  "mainString": "Babolat VS Team",
+  "crossString": "Luxilon Alu Power Rough",
+  "mainTension": 59.0,
+  "crossTension": 56.0,
+  "date2Return": 20190115,
+  "contact": "245711637"
 },
 {
   "name": "Andy Murray",
@@ -760,13 +707,13 @@
   "contact": "3922783982"
 },
 {
-  "name": "Roger Federer",
-  "mainString": "Wilson Natural",
-  "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 48.5,
-  "crossTension": 45.0,
-  "date2Return": 20181221,
-  "contact": "1951262"
+  "name": "Leslie Zhou",
+  "mainString": "Babolat RPM Blast",
+  "crossString": "Babolat RPM Blast",
+  "mainTension": 55.0,
+  "crossTension": 55.0,
+  "date2Return": 20181230,
+  "contact": "679289800"
 },
 {
   "name": "Serena Williams",
@@ -783,7 +730,7 @@
   "crossString": "Babolat Synthetic Gut",
   "mainTension": 55.0,
   "crossTension": 55.0,
-  "date2Return": 20190104,
+  "date2Return": 20190112,
   "contact": "3922783982"
 },
 {
@@ -796,13 +743,13 @@
   "contact": "56298383"
 },
 {
-  "name": "Some Dude",
-  "mainString": "Babolat Synthetic Gut",
-  "crossString": "Babolat Synthetic Gut",
+  "name": "Rafael Nadal",
+  "mainString": "Babolat RPM Blast",
+  "crossString": "Babolat RPM Blast",
   "mainTension": 55.0,
   "crossTension": 55.0,
-  "date2Return": 20190202,
-  "contact": "3922783982"
+  "date2Return": 20190204,
+  "contact": "993952962"
 },
 {
   "name": "Some Dude",
@@ -810,7 +757,7 @@
   "crossString": "Babolat Synthetic Gut",
   "mainTension": 55.0,
   "crossTension": 55.0,
-  "date2Return": 20190109,
+  "date2Return": 20190206,
   "contact": "3922783982"
 },
 {
@@ -850,13 +797,13 @@
   "contact": "3922783982"
 },
 {
-  "name": "Roger Federer",
-  "mainString": "Wilson Natural",
-  "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 48.5,
-  "crossTension": 45.0,
-  "date2Return": 20190111,
-  "contact": "877339330"
+  "name": "Some Dude",
+  "mainString": "Babolat Synthetic Gut",
+  "crossString": "Babolat Synthetic Gut",
+  "mainTension": 55.0,
+  "crossTension": 55.0,
+  "date2Return": 20190220,
+  "contact": "3922783982"
 },
 {
   "name": "Roger Federer",
@@ -873,8 +820,8 @@
   "crossString": "Babolat RPM Blast",
   "mainTension": 55.0,
   "crossTension": 55.0,
-  "date2Return": 20190204,
-  "contact": "993952962"
+  "date2Return": 20190208,
+  "contact": "304347896"
 },
 {
   "name": "Some Dude",
@@ -886,13 +833,13 @@
   "contact": "3922783982"
 },
 {
-  "name": "Serena Williams",
-  "mainString": "Wilson Natural",
-  "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 65.0,
-  "crossTension": 66.0,
-  "date2Return": 20181209,
-  "contact": "330711205"
+  "name": "Leslie Zhou",
+  "mainString": "Babolat RPM Blast",
+  "crossString": "Babolat RPM Blast",
+  "mainTension": 55.0,
+  "crossTension": 55.0,
+  "date2Return": 20190203,
+  "contact": "574247270"
 },
 {
   "name": "Serena Williams",
@@ -940,58 +887,31 @@
   "contact": "939211941"
 },
 {
-  "name": "Leslie Zhou",
-  "mainString": "Babolat RPM Blast",
-  "crossString": "Babolat RPM Blast",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20190203,
-  "contact": "574247270"
-},
-{
-  "name": "Novak Djokovic",
-  "mainString": "Babolat VS Team",
-  "crossString": "Luxilon Alu Power Rough",
-  "mainTension": 59.0,
-  "crossTension": 56.0,
-  "date2Return": 20190115,
-  "contact": "245711637"
-},
-{
-  "name": "Some Dude",
-  "mainString": "Babolat Synthetic Gut",
-  "crossString": "Babolat Synthetic Gut",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20190112,
-  "contact": "3922783982"
-},
-{
-  "name": "Some Dude",
-  "mainString": "Babolat Synthetic Gut",
-  "crossString": "Babolat Synthetic Gut",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20190220,
-  "contact": "3922783982"
-},
-{
-  "name": "Some Dude",
-  "mainString": "Babolat Synthetic Gut",
-  "crossString": "Babolat Synthetic Gut",
-  "mainTension": 55.0,
-  "crossTension": 55.0,
-  "date2Return": 20190206,
-  "contact": "3922783982"
-},
-{
   "name": "Rafael Nadal",
   "mainString": "Babolat RPM Blast",
   "crossString": "Babolat RPM Blast",
   "mainTension": 55.0,
   "crossTension": 55.0,
-  "date2Return": 20190208,
-  "contact": "304347896"
+  "date2Return": 20190104,
+  "contact": "483202275"
+},
+{
+  "name": "Andy Murray",
+  "mainString": "Luxilon Alu Power",
+  "crossString": "Babolat VS Touch",
+  "mainTension": 62.0,
+  "crossTension": 62.0,
+  "date2Return": 20190107,
+  "contact": "2839401653"
+},
+{
+  "name": "John Andews",
+  "mainString": "Luxilon 4G",
+  "crossString": "Luxilon 4G",
+  "mainTension": 53.0,
+  "crossTension": 53.0,
+  "date2Return": 20190130,
+  "contact": "3829503827"
 }
 ]
 }

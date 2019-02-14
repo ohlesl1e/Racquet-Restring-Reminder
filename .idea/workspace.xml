@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a374f055-a14e-4318-a4ee-0e134d7d970c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_sparkjava_spark_core_2_8_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Database.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Database.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Racquet-Restring-Reminder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Racquet-Restring-Reminder.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Racquet Restring Reminder/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/CustomerHeap$HeapException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/CustomerHeap$HeapException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/CustomerHeap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/CustomerHeap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Racquet-Restring-Reminder/reminder/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reminder/CustomerHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reminder/CustomerHeap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reminder/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reminder/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reminder/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reminder/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -66,14 +68,48 @@
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
     </session>
+    <session id="1634690826">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="428" />
+          <entry key="json" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="428" />
+          <entry key="JSON" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reminder/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+            <state relative-caret-position="1255">
+              <caret line="100" column="53" selection-start-line="100" selection-start-column="53" selection-end-line="100" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,10 +118,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reminder/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <folding>
+                <element signature="e#627#628#0" expanded="true" />
+                <element signature="e#657#658#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reminder/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
+            <state relative-caret-position="555">
+              <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1097#1098#0" expanded="true" />
@@ -95,11 +144,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Data/Database.json">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reminder/CustomerHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-175">
-              <caret line="307" column="23" lean-forward="true" selection-start-line="307" selection-start-column="23" selection-end-line="307" selection-end-column="23" />
+            <state relative-caret-position="1935">
+              <caret line="141" column="56" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,52 +159,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reminder/StringType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
+            <state relative-caret-position="300">
               <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#482#483#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reminder/CustomerHeap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="132" column="32" lean-forward="true" selection-start-line="132" selection-start-column="32" selection-end-line="132" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#get#0;class#CustomerHeap#0" />
-                <element signature="method#add#0;class#CustomerHeap#0" />
-                <element signature="method#remove#0;class#CustomerHeap#0" />
-                <element signature="method#heapifyUp#0;class#CustomerHeap#0" />
-                <element signature="method#heapifyDown#0;class#CustomerHeap#0" />
-                <element signature="method#addCustomer#0;class#CustomerHeap#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="17">
-                <caret line="1" selection-start-line="1" selection-end-line="1" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reminder/Customer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#657#658#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -187,23 +197,24 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/reminder/Tester.java" />
         <option value="$PROJECT_DIR$/src/reminder/Database.java" />
+        <option value="$PROJECT_DIR$/Data/Database.json" />
         <option value="$PROJECT_DIR$/src/reminder/CustomerHeap.java" />
         <option value="$PROJECT_DIR$/src/reminder/Main.java" />
-        <option value="$PROJECT_DIR$/Data/Database.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="278" />
-    <option name="y" value="-22" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="37" />
+    <option name="y" value="23" />
+    <option name="width" value="1403" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -236,7 +247,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542180289639" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550000691188" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
@@ -312,23 +329,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="37" y="23" width="1403" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.26865673" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.26451138" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.3991323" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.3987261" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.329718" />
@@ -372,95 +391,48 @@
     <entry file="file://$PROJECT_DIR$/src/reminder/StringDatabase.java" />
     <entry file="file://$PROJECT_DIR$/Data/StringDB.json" />
     <entry file="file://$PROJECT_DIR$/Data/UserDB.json" />
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_171/src.zip!/java/text/Format.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="156" selection-start-line="156" selection-end-line="156" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_171/src.zip!/java/text/DateFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="309" selection-start-line="309" selection-end-line="309" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_171/src.zip!/java/text/Format.java" />
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_171/src.zip!/java/text/DateFormat.java" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="text-editor">
         <state>
           <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="17">
-            <caret line="1" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reminder/Customer.java">
+    <entry file="file://$PROJECT_DIR$/src/reminder/Tester.java" />
+    <entry file="file://$PROJECT_DIR$/Data/Database.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#657#658#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reminder/Tester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reminder/StringType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#482#483#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reminder/CustomerHeap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="132" column="32" lean-forward="true" selection-start-line="132" selection-start-column="32" selection-end-line="132" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#get#0;class#CustomerHeap#0" />
-            <element signature="method#add#0;class#CustomerHeap#0" />
-            <element signature="method#remove#0;class#CustomerHeap#0" />
-            <element signature="method#heapifyUp#0;class#CustomerHeap#0" />
-            <element signature="method#heapifyDown#0;class#CustomerHeap#0" />
-            <element signature="method#addCustomer#0;class#CustomerHeap#0" />
-          </folding>
+        <state relative-caret-position="4320">
+          <caret line="288" column="37" selection-start-line="288" selection-start-column="37" selection-end-line="288" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reminder/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+        <state relative-caret-position="1255">
+          <caret line="100" column="53" selection-start-line="100" selection-start-column="53" selection-end-line="100" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reminder/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reminder/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
+        <state relative-caret-position="555">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1097#1098#0" expanded="true" />
@@ -469,19 +441,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Database.json">
+    <entry file="file://$PROJECT_DIR$/src/reminder/CustomerHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="307" column="23" lean-forward="true" selection-start-line="307" selection-start-column="23" selection-end-line="307" selection-end-column="23" />
+        <state relative-caret-position="1935">
+          <caret line="141" column="56" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reminder/StringType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#482#483#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Racquet-Restring-Reminder</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>com.sparkjava:spark-core:2.8.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

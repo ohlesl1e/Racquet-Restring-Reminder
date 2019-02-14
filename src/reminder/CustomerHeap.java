@@ -2,10 +2,12 @@ package reminder;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
+import com.google.gson.*;
 
 public class CustomerHeap {
 	private ArrayList<Customer> customers;
 	protected int size;
+	Gson custGson = new Gson();
 
 	public CustomerHeap() {
 		customers = new ArrayList<>();
@@ -95,7 +97,7 @@ public class CustomerHeap {
 			days = (int) (Math.pow(db.findString(crosses).getTensionLoss(), 25) - 1);
 		}
 		returnDate.add(Calendar.DATE, days);
-		return date;
+		return returnDate;
 	}
 
 	public void addCustomer(Database db, Calendar date) {
@@ -129,17 +131,17 @@ public class CustomerHeap {
 		System.out.println("Customer added: " + name + ", " + contact + ", Returning on: " + otherFormat.format(date2Return.getTime()));
 	}
 
-	public boolean printCustomers(int date, int i) {
-		boolean printed = false;
+	public ArrayList<String> printCustomers(int date, int i) {
+		ArrayList<String> returning = new ArrayList<>();
 		if (get(i).getDate2Return() > date) {
-			return printed;
+			return returning;
 		} else {
+			returning.add(custGson.toJson(get(i)));
 			get(i).printContact();
 			printCustomers(date, getLeftChildIndex(i));
 			printCustomers(date, getRightChildIndex(i));
-			printed = true;
 		}
-		return printed;
+		return returning;
 	}
 
 	public void removePrintedCustomers(int date, int i) {
