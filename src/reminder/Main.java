@@ -9,42 +9,51 @@ import java.lang.*;
 
 import static spark.Spark.*;
 
+class PreAdd {
+    String name;
+    String contact;
+    String mainString;
+    String crossString;
+    double mainTension;
+    double crossTension;
+}
+
 public class Main {
-	public static void printMenu() {
-		System.out.println("Menu");
-		System.out.println("1. Add String to Database");
-		System.out.println("2. Add Customers");
-		System.out.println("3. Show Restring Required Customers");
-		System.out.println("4. Show All Customers");
-		System.out.println("5. Show All Strings");
-		System.out.println("6. Quit");
-		System.out.print("Enter a Number: ");
-	}
+    public static void printMenu() {
+        System.out.println("Menu");
+        System.out.println("1. Add String to Database");
+        System.out.println("2. Add Customers");
+        System.out.println("3. Show Restring Required Customers");
+        System.out.println("4. Show All Customers");
+        System.out.println("5. Show All Strings");
+        System.out.println("6. Quit");
+        System.out.print("Enter a Number: ");
+    }
 
-	public static CustomerHeap createHeap(Database db) {
-		CustomerHeap heap = new CustomerHeap();
-		for (Customer c : db.customers) {
-			heap.add(c);
-		}
-		return heap;
-	}
+    public static CustomerHeap createHeap(Database db) {
+        CustomerHeap heap = new CustomerHeap();
+        for (Customer c : db.customers) {
+            heap.add(c);
+        }
+        return heap;
+    }
 
-	public static void main(String[] args) {
-		port(1234);
+    public static void main(String[] args) {
+        port(1234);
 
-		Gson gson = new Gson();
-		Scanner input = new Scanner(System.in);
-		boolean quit = false;
-		Database database = null;
-		try {
-			database = new Database();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		CustomerHeap customerHeap = createHeap(database);
-		Calendar currentDate = Calendar.getInstance();
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-		int today = Integer.parseInt(dateFormat.format(currentDate.getTime()));
+        Gson gson = new Gson();
+        Scanner input = new Scanner(System.in);
+        boolean quit = false;
+        Database database = null;
+        try {
+            database = new Database();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        CustomerHeap customerHeap = createHeap(database);
+        Calendar currentDate = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+        int today = Integer.parseInt(dateFormat.format(currentDate.getTime()));
 		/*
 		while (quit == false) {
 			printMenu();
@@ -85,23 +94,31 @@ public class Main {
 		}
 		*/
 
-		post("/api/add",(request, response) -> {
-			return "kool";
-		});
+        Database finalDatabase1 = database;
+        post("/api/addcustomer", (request, response) -> {
+            System.out.println(request.body());
+            PreAdd body = gson.fromJson(request.body(), PreAdd.class);
+            Customer newC = customerHeap.addCustomer(finalDatabase1, currentDate, body);
+            return gson.toJson(newC);
+        });
 
-		post("/api/remove", (request, response) -> {
-			return "fatality";
-		});
+        post("/api/remove", (request, response) -> {
+            return "fatality";
+        });
 
-		path("/api", () -> {
-			get("/allcustomers", (request, response) -> {
-				return gson.toJson(customerHeap);
-			});
-			get("/returning", (request, response) -> {
-				return customerHeap.printCustomers(today, 0);
-			});
-		});
+        Database finalDatabase = database;
+        path("/api", () -> {
+            get("/allcustomers", (request, response) -> {
+                return gson.toJson(customerHeap);
+            });
+            get("/allstrings", (request, response) -> {
+                return gson.toJson(finalDatabase.strings);
+            });
+            get("/returning", (request, response) -> {
+                return customerHeap.printCustomers(today, 0);
+            });
+        });
 
-		database.saveDatabase(customerHeap);
-	}
+        database.saveDatabase(customerHeap);
+    }
 }

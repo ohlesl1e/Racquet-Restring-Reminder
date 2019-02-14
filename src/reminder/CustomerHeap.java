@@ -100,35 +100,26 @@ public class CustomerHeap {
 		return returnDate;
 	}
 
-	public void addCustomer(Database db, Calendar date) {
+	public Customer addCustomer(Database db, Calendar date, PreAdd preAdd) {
 		Scanner in = new Scanner(System.in);
-		String name, contact, mains, crosses;
-		double mTension, xTension;
-		System.out.print("Enter Customer Name: ");
-		name = in.nextLine();
-		System.out.print("Enter Contact Number: ");
-		contact = in.nextLine();
-		System.out.print("Enter Main String: ");
-		mains = in.nextLine();
-		System.out.print("Enter Cross String: ");
-		crosses = in.nextLine();
-		System.out.print("Enter Main Tension: ");
-		mTension = in.nextDouble();
-		System.out.print("Enter Cross Tension: ");
-		xTension = in.nextDouble();
-		Calendar date2Return;
+		String name = preAdd.name;
+		String contact = preAdd.contact;
+		String mains = preAdd.mainString;
+		String crosses = preAdd.crossString;
+		double mTension = preAdd.mainTension;
+		double xTension = preAdd.crossTension;
+		Calendar date2Return = null;
 		try {
 			date2Return = calculateDate(mains, crosses, db, date);
 		} catch (NullPointerException e) {
 			System.out.println("Fail to add customer. (string not found)");
-			return;
 		}
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
 		SimpleDateFormat otherFormat = new SimpleDateFormat("MM/dd/yyyy");
 		Customer newCustomer = new Customer(name, mains, crosses, mTension, xTension, Integer.parseInt(dateFormat.format(date2Return.getTime())), contact);
 		add(newCustomer);
 		db.customers.add(newCustomer);
-		System.out.println("Customer added: " + name + ", " + contact + ", Returning on: " + otherFormat.format(date2Return.getTime()));
+		return newCustomer;
 	}
 
 	public ArrayList<String> printCustomers(int date, int i) {

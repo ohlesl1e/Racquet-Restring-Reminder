@@ -1,0 +1,27 @@
+@media all and (min-width: 480px) {
+    .AddCustomer {
+        padding: 60px 0;
+        background-color: #282C34;
+        margin-bottom: 100px;
+    }
+  
+    .AddCustomer form {
+        text-align: start;
+        padding: 25px 40px;
+        margin: auto;
+        max-width: 420px;
+        color: rgb(255, 255, 255);
+        background-color: #323740;
+        overflow: auto;
+        display: block;
+    }
+
+    .FormGroup{
+        margin-bottom: 4px;
+    }
+
+    .Link {
+        color: white;
+        padding-right: 10px;
+    }
+  }

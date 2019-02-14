@@ -1,28 +1,51 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Routes from './Routes';
+import { connect } from 'react-redux';
+import { Navbar } from "react-bootstrap";
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      color: 'black',
+      banner: 'hello',
+      isOpen: true,
+    }
+    this.buttonHandler = this.buttonHandler.bind(this);
+    console.log(this.props)
+  }
+
+  buttonHandler() {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    });
+  }
+
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <Navbar>
+            <Link to="/">Home</Link>
+            <Link to="/addstring">Add String</Link>
+            <Link to="/addcustomer">Add Customer</Link>
+          </Navbar>
+          <Routes />
+        </div>
+      </Router>
     );
   }
 }
+
+const mapStateToProps = (state, ownState) => {
+  return {
+  }
+}
+
+const mapDispatchToProps = {}
 
 export default App;
