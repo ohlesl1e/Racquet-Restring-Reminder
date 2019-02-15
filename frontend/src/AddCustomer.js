@@ -76,6 +76,7 @@ export class AddCustomer extends Component {
                     <FormGroup className="FormGroup" controlId="name">
                         <Form.Label>Name: <br/></Form.Label>
                         <FormControl
+                            placeholder="Roger Federer"
                             autoFocus
                             type="name"
                             value={this.state.name}
@@ -103,7 +104,7 @@ export class AddCustomer extends Component {
                         </FormControl>
                     </FormGroup>
                     <FormGroup className="FormGroup" controlId="crossString">
-                        <Form.Label>Main: <br /></Form.Label>
+                        <Form.Label>Cross: <br /></Form.Label>
                         <FormControl as="select" value={this.state.crossString} onChange={this.handleChange}>
                             <option>Choose...</option>
                             {this.state.strings.map(s => {

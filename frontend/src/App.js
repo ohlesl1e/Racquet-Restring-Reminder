@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Routes from './Routes';
-import { connect } from 'react-redux';
 import { Navbar } from "react-bootstrap";
-import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 class App extends Component {
@@ -33,6 +32,8 @@ class App extends Component {
             <Link to="/">Home</Link>
             <Link to="/addstring">Add String</Link>
             <Link to="/addcustomer">Add Customer</Link>
+            <Link to="/returning">Restring Due</Link>
+            <Link to="/stringdatabase">String Database</Link>
           </Navbar>
           <Routes />
         </div>

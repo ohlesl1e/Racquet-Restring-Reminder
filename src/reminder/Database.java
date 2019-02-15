@@ -42,18 +42,14 @@ public class Database {
 		return tensionLoss;
 	}
 
-	public void addString() {
-		Scanner i = new Scanner(System.in);
-		System.out.print("Enter String Name: ");
-		String name = i.nextLine();
-		System.out.print("Enter String Material: ");
-		String material = i.nextLine();
-		System.out.print("Enter String Tensionloss: ");
-		double tensionloss = calculateTensionLoss(i.nextDouble());
+	public StringType addString(PreAddStr preAdd) {
+		String name = preAdd.name;
+		String material = preAdd.material;
+		double tensionloss = calculateTensionLoss(preAdd.tensionLoss);
 		StringType newString = new StringType(name, material, tensionloss);
 		stringTypeHashMap.put(name, newString);
 		strings.add(newString);
-		System.out.println("String added: " + name + ", " + material + ", " + tensionloss);
+		return newString;
 	}
 
 	public void printAllStrings() {

@@ -9,13 +9,19 @@ import java.lang.*;
 
 import static spark.Spark.*;
 
-class PreAdd {
+class PreAddCust {
     String name;
     String contact;
     String mainString;
     String crossString;
     double mainTension;
     double crossTension;
+}
+
+class PreAddStr {
+    String name;
+    String material;
+    double tensionLoss;
 }
 
 public class Main {
@@ -97,13 +103,22 @@ public class Main {
         Database finalDatabase1 = database;
         post("/api/addcustomer", (request, response) -> {
             System.out.println(request.body());
-            PreAdd body = gson.fromJson(request.body(), PreAdd.class);
+            PreAddCust body = gson.fromJson(request.body(), PreAddCust.class);
             Customer newC = customerHeap.addCustomer(finalDatabase1, currentDate, body);
             return gson.toJson(newC);
         });
 
-        post("/api/remove", (request, response) -> {
-            return "fatality";
+        Database finalDatabase2 = database;
+        post("/api/addstring", (request, response) -> {
+            System.out.println(request.body());
+            PreAddStr body = gson.fromJson(request.body(), PreAddStr.class);
+            StringType newS = finalDatabase2.addString(body);
+            return gson.toJson(newS);
+        });
+
+        get("/api/clear", (request, response) -> {
+            customerHeap.removePrintedCustomers(today,0);
+            return "done";
         });
 
         Database finalDatabase = database;
@@ -115,7 +130,10 @@ public class Main {
                 return gson.toJson(finalDatabase.strings);
             });
             get("/returning", (request, response) -> {
-                return customerHeap.printCustomers(today, 0);
+                ArrayList<Customer> returning = new ArrayList<>();
+                returning = customerHeap.printCustomers(today, 0, returning);
+                System.out.println(returning.toString());
+                return gson.toJson(returning);
             });
         });
 

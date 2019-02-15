@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { Button } from 'react-bootstrap'
+import {Link } from 'react-router-dom'
 import axios from 'axios'
-import './HomePage.css'
+import './Returning.css'
 
-export class HomePage extends Component {
+export class Returning extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -12,21 +14,31 @@ export class HomePage extends Component {
     }
 
     componentDidMount() {
-        axios.get("/api/allcustomers")
+        axios.get("/api/returning")
             .then((res) => {
                 console.log(res.data);
-                const customers = res.data.customers
+                const customers = res.data
                 console.log({ customers })
                 this.setState({ customers })
             }).catch((e) => {
                 console.log(e);
-
             })
+    }
+
+    buttonHandler = () => {
+        axios({
+            method: "GET",
+            url: "/api/clear",
+        }).then((res) => {
+            console.log(res.data);
+        }).catch((e) => {
+            console.log(e)
+        })
     }
 
     render() {
         return (
-            <div className="HomePage">
+            <div className="Returning">
                 <table>
                     <td>Name</td>
                     <td>Contact</td>
@@ -43,9 +55,16 @@ export class HomePage extends Component {
                         )
                     })}
                 </table>
+                <Link to="/returning">
+                    <Button
+                        type="submit"
+                        onClick={this.buttonHandler}
+                    >Clear
+                </Button>
+                </Link>
             </div>
         )
     }
 }
 
-export default HomePage
+export default Returning

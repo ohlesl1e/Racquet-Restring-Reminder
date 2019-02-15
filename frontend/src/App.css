@@ -1,6 +1,8 @@
 .App {
+  padding: 60px 0;
   text-align: center;
-  background-color: #fbfbfb;
+  background-color: #282C34;
+  color: #fff;
   display: block;
   max-width: 1280px;
   margin: auto;

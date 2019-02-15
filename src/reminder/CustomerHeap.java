@@ -100,7 +100,7 @@ public class CustomerHeap {
 		return returnDate;
 	}
 
-	public Customer addCustomer(Database db, Calendar date, PreAdd preAdd) {
+	public Customer addCustomer(Database db, Calendar date, PreAddCust preAdd) {
 		Scanner in = new Scanner(System.in);
 		String name = preAdd.name;
 		String contact = preAdd.contact;
@@ -122,17 +122,17 @@ public class CustomerHeap {
 		return newCustomer;
 	}
 
-	public ArrayList<String> printCustomers(int date, int i) {
-		ArrayList<String> returning = new ArrayList<>();
+	public ArrayList<Customer> printCustomers(int date, int i, ArrayList<Customer> returning) {
+		ArrayList<Customer> returnclone = (ArrayList<Customer>) returning.clone();
 		if (get(i).getDate2Return() > date) {
-			return returning;
+			return returnclone;
 		} else {
-			returning.add(custGson.toJson(get(i)));
-			get(i).printContact();
-			printCustomers(date, getLeftChildIndex(i));
-			printCustomers(date, getRightChildIndex(i));
+			returnclone.add(get(i));
+			//get(i).printContact();
+			returnclone = printCustomers(date, getLeftChildIndex(i), returnclone);
+			returnclone = printCustomers(date, getRightChildIndex(i), returnclone);
 		}
-		return returning;
+		return returnclone;
 	}
 
 	public void removePrintedCustomers(int date, int i) {
@@ -141,6 +141,7 @@ public class CustomerHeap {
 		} else {
 			removePrintedCustomers(date, getLeftChildIndex(i));
 			removePrintedCustomers(date, getRightChildIndex(i));
+			get(i).printContact();
 			remove(i);
 		}
 	}
