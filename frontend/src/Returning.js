@@ -26,10 +26,8 @@ export class Returning extends Component {
     }
 
     buttonHandler = () => {
-        axios({
-            method: "GET",
-            url: "/api/clear",
-        }).then((res) => {
+        axios.get("/api/clear")
+            .then((res) => {
             console.log(res.data);
         }).catch((e) => {
             console.log(e)
@@ -44,6 +42,7 @@ export class Returning extends Component {
                     <td>Contact</td>
                     <td>Strings(m/x)</td>
                     <td>Tensions</td>
+                    <td>Due Date</td>
                     {this.state.customers.map(c => {
                         return (
                             <tr>
@@ -51,6 +50,7 @@ export class Returning extends Component {
                                 <td>{c.contact}</td>
                                 <td>{c.mainString}{" / "}{c.crossString}</td>
                                 <td>{c.mainTension}{" lb / "}{c.crossTension}{" lb"}</td>
+                                <td>{c.date2Return}</td>
                             </tr>
                         )
                     })}

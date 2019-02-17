@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { FormGroup, FormControl, Form, Button } from "react-bootstrap";
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import "./AddCustomer.css";
 
 export class AddCustomer extends Component {
@@ -14,6 +14,7 @@ export class AddCustomer extends Component {
             mainTension: "",
             crossTension: "",
             contact: "",
+            email: "",
             strings: []
         }
     }
@@ -35,6 +36,7 @@ export class AddCustomer extends Component {
             data: {
                 name: this.state.name,
                 contact: this.state.contact,
+                email: this.state.email,
                 mainString: this.state.mainString,
                 crossString: this.state.crossString,
                 mainTension: this.state.mainTension,
@@ -74,7 +76,7 @@ export class AddCustomer extends Component {
             <div className="AddCustomer">
                 <form onSubmit={this.handleSubmit}>
                     <FormGroup className="FormGroup" controlId="name">
-                        <Form.Label>Name: <br/></Form.Label>
+                        <Form.Label>Name: <br /></Form.Label>
                         <FormControl
                             placeholder="Roger Federer"
                             autoFocus
@@ -84,11 +86,22 @@ export class AddCustomer extends Component {
                         />
                     </FormGroup>
                     <FormGroup className="FormGroup" controlId="contact">
-                        <Form.Label>Contact: <br /></Form.Label>
+                        <Form.Label>Phone: <br /></Form.Label>
                         <FormControl
+                            placeholder="#########"
                             autoFocus
                             type="contact"
                             value={this.state.contact}
+                            onChange={this.handleChange}
+                        />
+                    </FormGroup>
+                    <FormGroup className="FormGroup" controlId="email">
+                        <Form.Label>E-mail: <br /></Form.Label>
+                        <FormControl
+                            placeholder="subzer0@gmail.com"
+                            autoFocus
+                            type="email"
+                            value={this.state.email}
                             onChange={this.handleChange}
                         />
                     </FormGroup>
@@ -132,16 +145,14 @@ export class AddCustomer extends Component {
                             onChange={this.handleChange}
                         />
                     </FormGroup>
-                    <Link to="/">
-                        <Button
-                            block
-                            disabled={!this.validateForm()}
-                            type="submit"
-                            onClick={this.submitHandler}
-                        >
-                            Submit
-                            </Button>
-                    </Link>
+                    <Button
+                        block
+                        disabled={!this.validateForm()}
+                        type="submit"
+                        onClick={this.submitHandler}
+                    >
+                        Submit
+                    </Button>
                 </form>
             </div>
         )

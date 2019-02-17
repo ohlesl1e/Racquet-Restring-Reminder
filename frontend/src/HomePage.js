@@ -15,12 +15,21 @@ export class HomePage extends Component {
         axios.get("/api/allcustomers")
             .then((res) => {
                 console.log(res.data);
-                const customers = res.data.customers
+                const customers = res.data
                 console.log({ customers })
                 this.setState({ customers })
             }).catch((e) => {
                 console.log(e);
 
+            })
+    }
+
+    handleClick = event => {
+        axios.get("/api/save")
+            .then((res) => {
+                console.log(res.data)
+            }).catch((e) => {
+                console.log(e);
             })
     }
 
@@ -30,19 +39,24 @@ export class HomePage extends Component {
                 <table>
                     <td>Name</td>
                     <td>Contact</td>
+                    <td>E-mail</td>
                     <td>Strings(m/x)</td>
                     <td>Tensions</td>
+                    <td>Due Date</td>
                     {this.state.customers.map(c => {
                         return (
                             <tr>
                                 <td>{c.name}</td>
                                 <td>{c.contact}</td>
+                                <td><a href={"mailto:" + c.rmail}>{c.email}</a></td>
                                 <td>{c.mainString}{" / "}{c.crossString}</td>
                                 <td>{c.mainTension}{" lb / "}{c.crossTension}{" lb"}</td>
+                                <td>{c.dueDate}</td>
                             </tr>
                         )
                     })}
                 </table>
+                <button onClick={this.handleClick}>Save</button>
             </div>
         )
     }

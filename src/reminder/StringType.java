@@ -3,9 +3,9 @@ package reminder;
 import java.util.Comparator;
 
 public class StringType {
-	private String name;
-	private String material;
-	private double tensionLoss;
+	protected String name;
+	protected String material;
+	protected double tensionLoss;
 
 	public StringType(String name, String material, double tensionLoss) {
 		this.name = name;

@@ -1,17 +1,24 @@
 package reminder;
 
 import com.google.gson.Gson;
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.io.*;
 import java.lang.*;
 
+import static com.mongodb.client.model.Filters.eq;
 import static spark.Spark.*;
 
 class PreAddCust {
     String name;
     String contact;
+    String email;
     String mainString;
     String crossString;
     double mainTension;
@@ -25,118 +32,151 @@ class PreAddStr {
 }
 
 public class Main {
-    public static void printMenu() {
-        System.out.println("Menu");
-        System.out.println("1. Add String to Database");
-        System.out.println("2. Add Customers");
-        System.out.println("3. Show Restring Required Customers");
-        System.out.println("4. Show All Customers");
-        System.out.println("5. Show All Strings");
-        System.out.println("6. Quit");
-        System.out.print("Enter a Number: ");
+    public static double calculateTensionLoss(double x) {
+        double tensionLoss = Math.pow(Math.E, (Math.log(31) / (100 * (x / 62))));
+        return tensionLoss;
     }
 
-    public static CustomerHeap createHeap(Database db) {
-        CustomerHeap heap = new CustomerHeap();
-        for (Customer c : db.customers) {
-            heap.add(c);
+    public static StringType addString(PreAddStr preAdd) {
+        String name = preAdd.name;
+        String material = preAdd.material;
+        double tensionloss = calculateTensionLoss(preAdd.tensionLoss);
+        StringType newString = new StringType(name, material, tensionloss);
+        return newString;
+    }
+
+    public static Calendar calculateDate(String mains, String crosses, MongoCollection<Document> db, Calendar date) {
+        int days;
+        Calendar returnDate = (Calendar) date.clone();
+        Document dbMain = db.find(eq("name", mains)).first();
+        Document dbCross = db.find(eq("name", crosses)).first();
+        if (mains.equalsIgnoreCase(crosses) || dbMain.getDouble("tensionLoss") < dbCross.getDouble("tensionLoss")) {
+            days = (int) (Math.pow(dbMain.getDouble("tensionLoss"), 25) - 1);
+        } else {
+            days = (int) (Math.pow(dbCross.getDouble("tensionLoss"), 25) - 1);
         }
-        return heap;
+        if (days > 365) {
+            days = 365;
+        }
+        returnDate.add(Calendar.DATE, days);
+        return returnDate;
+    }
+
+    public static Customer addCustomer(MongoCollection db, Calendar date, PreAddCust preAdd) {
+        String name = preAdd.name;
+        String contact = preAdd.contact;
+        String mains = preAdd.mainString;
+        String crosses = preAdd.crossString;
+        String email = preAdd.email;
+        double mTension = preAdd.mainTension;
+        double xTension = preAdd.crossTension;
+        Calendar date2Return = null;
+        try {
+            date2Return = calculateDate(mains, crosses, db, date);
+        } catch (NullPointerException e) {
+            System.out.println("Fail to add customer. (string not found)");
+        }
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+        SimpleDateFormat otherFormat = new SimpleDateFormat("MM/dd/yyyy");
+        Customer newCustomer = new Customer(name, mains, crosses, mTension, xTension, Integer.parseInt(dateFormat.format(date2Return.getTime())), otherFormat.format(date2Return.getTime()), contact, email);
+        return newCustomer;
+    }
+
+    public static ArrayList getAll(MongoCollection collection){
+        MongoCursor<Document> stringCursor = collection.find().iterator();
+        ArrayList<Document> all = new ArrayList<>();
+        while (stringCursor.hasNext()){
+            all.add(stringCursor.next());
+        }
+        return all;
+    }
+
+    public static ArrayList getDue(MongoCollection collection, int date){
+        MongoCursor<Document> cursor = collection.find().iterator();
+        ArrayList<Document> all = new ArrayList<>();
+        while (cursor.hasNext()){
+            Document temp = cursor.next();
+            if (temp.getInteger("date2Return") < date)
+            all.add(temp);
+        }
+        return all;
+    }
+
+    public static void clearDue(MongoCollection collection, int date){
+        MongoCursor<Document> cursor = collection.find().iterator();
+        ArrayList<Document> all = new ArrayList<>();
+        while (cursor.hasNext()){
+            Document temp = cursor.next();
+            if (temp.getInteger("date2Return") < date){
+                collection.deleteOne(eq("_id", temp.get("_id")));
+            }
+
+        }
+        return;
     }
 
     public static void main(String[] args) {
         port(1234);
 
+        MongoClient mongoClient = new MongoClient("localhost", 27017);
+        MongoDatabase mongoDatabase = mongoClient.getDatabase("RRS");
+        MongoCollection<Document> stringCollection = mongoDatabase.getCollection("strings");
+        MongoCollection<Document> customerCollection = mongoDatabase.getCollection("customers");
+
+
         Gson gson = new Gson();
-        Scanner input = new Scanner(System.in);
-        boolean quit = false;
-        Database database = null;
-        try {
-            database = new Database();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        CustomerHeap customerHeap = createHeap(database);
         Calendar currentDate = Calendar.getInstance();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
         int today = Integer.parseInt(dateFormat.format(currentDate.getTime()));
-		/*
-		while (quit == false) {
-			printMenu();
-			switch (input.nextInt()) {
-				case 1:
-					System.out.println();
-					database.addString();
-					break;
-				case 2:
-					System.out.println();
-					customerHeap.addCustomer(database, currentDate);
-					break;
-				case 3:
-					System.out.println();
-					if (customerHeap.printCustomers(today, 0)) {
-						System.out.print("\nRemove Contacted Customers?(Y/N): ");
-						String remove = input.next();
-						if (remove.equalsIgnoreCase("y")) {
-							customerHeap.removePrintedCustomers(today, 0);
-						}
-					}
-					break;
-				case 4:
-					System.out.println("\nCustomers:");
-					customerHeap.showAllCustomers();
-					break;
-				case 5:
-					System.out.println("\nInventory:");
-					database.printAllStrings();
-					break;
-				case 6:
-					quit = true;
-					break;
-				default:
-					System.out.println("Invalid Command");
-			}
-			System.out.println("=====================================================================================================\n");
-		}
-		*/
 
-        Database finalDatabase1 = database;
         post("/api/addcustomer", (request, response) -> {
             System.out.println(request.body());
             PreAddCust body = gson.fromJson(request.body(), PreAddCust.class);
-            Customer newC = customerHeap.addCustomer(finalDatabase1, currentDate, body);
+            Customer newC = addCustomer(stringCollection, currentDate, body);
+            Document newCustomer = new Document();
+            newCustomer.append("name", newC.name);
+            newCustomer.append("contact", newC.contact);
+            newCustomer.append("email", newC.email);
+            newCustomer.append("mainString", newC.mainString);
+            newCustomer.append("crossString", newC.crossString);
+            newCustomer.append("mainTension", newC.mainTension);
+            newCustomer.append("crossTension", newC.crossTension);
+            newCustomer.append("date2Return", newC.date2Return);
+            newCustomer.append("dueDate", newC.dueDate);
+            customerCollection.insertOne(newCustomer);
             return gson.toJson(newC);
         });
 
-        Database finalDatabase2 = database;
         post("/api/addstring", (request, response) -> {
             System.out.println(request.body());
             PreAddStr body = gson.fromJson(request.body(), PreAddStr.class);
-            StringType newS = finalDatabase2.addString(body);
-            return gson.toJson(newS);
+            if (stringCollection.find(eq("name", body.name)).first() == null) {
+                StringType newS = addString(body);
+
+                return gson.toJson(newS);
+            }
+            return "String existed";
         });
 
-        get("/api/clear", (request, response) -> {
-            customerHeap.removePrintedCustomers(today,0);
-            return "done";
-        });
 
-        Database finalDatabase = database;
+
         path("/api", () -> {
             get("/allcustomers", (request, response) -> {
-                return gson.toJson(customerHeap);
+                ArrayList<Document> customers = getAll(customerCollection);
+                return gson.toJson(customers);
             });
             get("/allstrings", (request, response) -> {
-                return gson.toJson(finalDatabase.strings);
+                ArrayList<Document> strings = getAll(stringCollection);
+                return gson.toJson(strings);
             });
             get("/returning", (request, response) -> {
-                ArrayList<Customer> returning = new ArrayList<>();
-                returning = customerHeap.printCustomers(today, 0, returning);
-                System.out.println(returning.toString());
-                return gson.toJson(returning);
+                ArrayList<Customer> due = getDue(customerCollection, today);
+                return gson.toJson(due);
+            });
+            get("/clear", (request, response) -> {
+                clearDue(customerCollection, today);
+                return "done";
             });
         });
-
-        database.saveDatabase(customerHeap);
     }
 }
