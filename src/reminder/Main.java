@@ -1,6 +1,7 @@
 package reminder;
 
 import com.google.gson.Gson;
+import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
@@ -152,7 +153,12 @@ public class Main {
             PreAddStr body = gson.fromJson(request.body(), PreAddStr.class);
             if (stringCollection.find(eq("name", body.name)).first() == null) {
                 StringType newS = addString(body);
-
+                Document string = new Document();
+                string.append("name", newS.name);
+                string.append("material", newS.material);
+                string.append("tensionLoss", newS.tensionLoss);
+                stringCollection.insertOne(string);
+                stringCollection.find().sort(new BasicDBObject().append("name",1));
                 return gson.toJson(newS);
             }
             return "String existed";
