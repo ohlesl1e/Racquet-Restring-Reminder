@@ -48,7 +48,7 @@ export class HomePage extends Component {
                             <tr>
                                 <td>{c.name}</td>
                                 <td>{c.contact}</td>
-                                <td><a href={"mailto:" + c.rmail}>{c.email}</a></td>
+                                <td><a href={"mailto:" + c.email}>{c.email}</a></td>
                                 <td>{c.mainString}{" / "}{c.crossString}</td>
                                 <td>{c.mainTension}{" lb / "}{c.crossTension}{" lb"}</td>
                                 <td>{c.dueDate}</td>

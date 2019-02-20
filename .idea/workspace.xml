@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a374f055-a14e-4318-a4ee-0e134d7d970c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reminder/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reminder/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Returning.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Returning.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,9 +17,11 @@
     <session id="1634690826">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -38,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reminder/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="160" column="80" selection-start-line="160" selection-start-column="80" selection-end-line="160" selection-end-column="80" />
+            <state relative-caret-position="225">
+              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -47,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reminder/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="465">
               <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
@@ -67,10 +70,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-              <folding>
-                <element signature="e#452#453#0" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -121,6 +120,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,9 +156,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,7 +166,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550376576182" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550608524930" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -252,7 +251,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="23" width="1401" height="877" extended-state="6" />
+    <frame x="39" y="23" width="1401" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -260,7 +259,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.27225903" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.27961737" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.329718" />
@@ -269,7 +268,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32611465" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32611465" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -526,30 +525,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reminder/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reminder/CustomerHeap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="91" column="64" selection-start-line="91" selection-start-column="64" selection-end-line="91" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reminder/Database.java" />
+    <entry file="file://$PROJECT_DIR$/src/reminder/CustomerHeap.java" />
     <entry file="file://$PROJECT_DIR$/src/reminder/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="160" column="80" selection-start-line="160" selection-start-column="80" selection-end-line="160" selection-end-column="80" />
+        <state relative-caret-position="225">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reminder/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="465">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
@@ -565,10 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding>
-            <element signature="e#452#453#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
